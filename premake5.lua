@@ -21,7 +21,6 @@ project "glfw"
 	
 	filter "system:windows"
 		systemversion "latest"
-		buildoptions "/MD"
 		
 		files
 		{
@@ -45,7 +44,9 @@ project "glfw"
     filter "configurations:Debug"
         runtime "Debug"
         symbols "on"
+		buildoptions "/MTd"
 
     filter "configurations:Release"
         runtime "Release"
         optimize "on"
+		buildoptions "/MTd"
